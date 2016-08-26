@@ -1,10 +1,13 @@
 {
   "name": "mindmeister-desktop",
+  "productName": "Mindmeister Desktop",
   "version": "1.0.0",
   "description": "Mindmeister desktop version",
   "main": "main.js",
   "scripts": {
-    "start": "electron ."
+    "start": "electron .",
+    "pack": "build --dir",
+    "dist": "build"
   },
   "repository": {
     "type": "git",
@@ -16,12 +19,20 @@
     "mindmap"
   ],
   "author": "Jonatas Freitas",
-  "license": "CC0-1.0",
+  "license": "",
   "bugs": {
-    "url": "https://github.com/electron/electron-quick-start/issues"
+    "url": "https://github.com/jonatasfreitasv/mindmesiter_desktop/issues"
   },
-  "homepage": "https://github.com/electron/electron-quick-start#readme",
+  "build": {
+    "appId": "mindmesiter_desktop.id",
+    "category": "mindmesiter.desktop.mindmap.app",
+    "win": {
+      "iconUrl": "http://www.iconarchive.com/download/i89758/alecive/flatwoken/Apps-Mindmeister.ico"
+    }
+  },
+  "homepage": "https://github.com/jonatasfreitasv/mindmesiter_desktop#readme",
   "devDependencies": {
+    "electron-builder": "^5.34.1",
     "electron-packager": "^7.7.0",
     "electron-prebuilt": "^1.2.0"
   }
